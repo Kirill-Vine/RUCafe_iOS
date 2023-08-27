@@ -11,7 +11,7 @@ import SwiftUI
 struct RUCafe_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            mainMenu()
         }
     }
 }

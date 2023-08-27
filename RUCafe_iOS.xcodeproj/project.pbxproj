@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		EDC9B4DC2A8BD80F00227240 /* RUCafe_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4DB2A8BD80F00227240 /* RUCafe_iOSApp.swift */; };
-		EDC9B4DE2A8BD80F00227240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4DD2A8BD80F00227240 /* ContentView.swift */; };
+		EDC9B4DE2A8BD80F00227240 /* mainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4DD2A8BD80F00227240 /* mainMenu.swift */; };
 		EDC9B4E02A8BD81000227240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC9B4DF2A8BD81000227240 /* Assets.xcassets */; };
 		EDC9B4E32A8BD81000227240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC9B4E22A8BD81000227240 /* Preview Assets.xcassets */; };
+		EDC9B4EA2A8BDCA400227240 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4E92A8BDCA400227240 /* MenuItem.swift */; };
+		EDC9B4EC2A8BE3C900227240 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4EB2A8BE3C900227240 /* Coffee.swift */; };
+		EDC9B4F02A8C0B8600227240 /* coffeeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4EF2A8C0B8600227240 /* coffeeMenu.swift */; };
+		EDC9B4F82A8E79EE00227240 /* cartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4F72A8E79EE00227240 /* cartMenu.swift */; };
+		EDC9B4FA2A8E821600227240 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4F92A8E821600227240 /* Order.swift */; };
+		EDCFD36F2A95118700D59E12 /* ordersMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD36E2A95118700D59E12 /* ordersMenu.swift */; };
+		EDCFD3712A95120D00D59E12 /* donutsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD3702A95120D00D59E12 /* donutsMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDC9B4D82A8BD80F00227240 /* RUCafe_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUCafe_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC9B4DB2A8BD80F00227240 /* RUCafe_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUCafe_iOSApp.swift; sourceTree = "<group>"; };
-		EDC9B4DD2A8BD80F00227240 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDC9B4DD2A8BD80F00227240 /* mainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenu.swift; sourceTree = "<group>"; };
 		EDC9B4DF2A8BD81000227240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC9B4E22A8BD81000227240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDC9B4E92A8BDCA400227240 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EDC9B4EB2A8BE3C900227240 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		EDC9B4EF2A8C0B8600227240 /* coffeeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffeeMenu.swift; sourceTree = "<group>"; };
+		EDC9B4F72A8E79EE00227240 /* cartMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartMenu.swift; sourceTree = "<group>"; };
+		EDC9B4F92A8E821600227240 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EDCFD36E2A95118700D59E12 /* ordersMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordersMenu.swift; sourceTree = "<group>"; };
+		EDCFD3702A95120D00D59E12 /* donutsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donutsMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +65,16 @@
 		EDC9B4DA2A8BD80F00227240 /* RUCafe_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EDC9B4EF2A8C0B8600227240 /* coffeeMenu.swift */,
+				EDC9B4DD2A8BD80F00227240 /* mainMenu.swift */,
 				EDC9B4DB2A8BD80F00227240 /* RUCafe_iOSApp.swift */,
-				EDC9B4DD2A8BD80F00227240 /* ContentView.swift */,
 				EDC9B4DF2A8BD81000227240 /* Assets.xcassets */,
+				EDC9B4E92A8BDCA400227240 /* MenuItem.swift */,
+				EDC9B4EB2A8BE3C900227240 /* Coffee.swift */,
+				EDC9B4F92A8E821600227240 /* Order.swift */,
+				EDC9B4F72A8E79EE00227240 /* cartMenu.swift */,
+				EDCFD36E2A95118700D59E12 /* ordersMenu.swift */,
+				EDCFD3702A95120D00D59E12 /* donutsMenu.swift */,
 				EDC9B4E12A8BD81000227240 /* Preview Content */,
 			);
 			path = RUCafe_iOS;
@@ -137,8 +158,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC9B4DE2A8BD80F00227240 /* ContentView.swift in Sources */,
+				EDCFD36F2A95118700D59E12 /* ordersMenu.swift in Sources */,
+				EDC9B4EA2A8BDCA400227240 /* MenuItem.swift in Sources */,
+				EDC9B4DE2A8BD80F00227240 /* mainMenu.swift in Sources */,
+				EDC9B4FA2A8E821600227240 /* Order.swift in Sources */,
+				EDC9B4F02A8C0B8600227240 /* coffeeMenu.swift in Sources */,
 				EDC9B4DC2A8BD80F00227240 /* RUCafe_iOSApp.swift in Sources */,
+				EDC9B4F82A8E79EE00227240 /* cartMenu.swift in Sources */,
+				EDC9B4EC2A8BE3C900227240 /* Coffee.swift in Sources */,
+				EDCFD3712A95120D00D59E12 /* donutsMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
