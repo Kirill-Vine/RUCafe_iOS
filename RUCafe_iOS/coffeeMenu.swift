@@ -22,6 +22,8 @@ struct coffeeMenu: View {
         CheckListItem(id:3,title: "Caramel"),
         CheckListItem(id:4,title: "Mocha")
         ]
+    @State var noOfCups = "1"
+    @State var sizeOfCup = "Short"
     var body: some View {
         ZStack{
             Image(systemName: "squareshape.fill")
@@ -41,52 +43,66 @@ struct coffeeMenu: View {
                         Section() {
                                 Button("1") {
                                     currentCoffee.setQuantity(i: 1)
+                                    noOfCups = "1"
                                 }
                                 Button("2") {
                                     currentCoffee.setQuantity(i: 2)
+                                    noOfCups = "2"
                                 }
                                 Button("3") {
                                     currentCoffee.setQuantity(i: 3)
+                                    noOfCups = "3"
                                 }
                                 Button("4") {
                                     currentCoffee.setQuantity(i: 4)
+                                    noOfCups = "4"
                                 }
                                 Button("5") {
                                     currentCoffee.setQuantity(i: 5)
+                                    noOfCups = "5"
                                 }
                             }
                     } label: {
-                        Label("Number of cups", systemImage: "number")
+                        Label("Number of cups: ", systemImage: "number")
                     }
                     .foregroundColor(Color(hue: 0.1, saturation: 0.96, brightness: 0.415))
+                    Text(noOfCups)
+                        .foregroundColor(Color(hue: 0.05, saturation: 0.96, brightness: 0.415))
+                        .padding(/*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
                     Menu {
                         Section() {
                                 Button("SHORT") {
                                     currentCoffee.setSize(sizeEnum: .SHORT)
+                                    sizeOfCup = "Short"
                                 }
                                 Button("TALL") {
                                     currentCoffee.setSize(sizeEnum: .TALL)
+                                    sizeOfCup = "Tall"
                                 }
                                 Button("GRANDE") {
                                     currentCoffee.setSize(sizeEnum: .GRANDE)
+                                    sizeOfCup = "Grande"
                                 }
                                 Button("VENTI") {
                                     currentCoffee.setSize(sizeEnum: .VENTI)
+                                    sizeOfCup = "Venti"
                                 }
                             }
                     } label: {
-                        Label("Size", systemImage: "cup.and.saucer.fill")
+                        Label("Size: ", systemImage: "cup.and.saucer.fill")
                     }
-                    .padding()
                     .foregroundColor(Color(hue: 0.1, saturation: 0.96, brightness: 0.415))
+                    Text(sizeOfCup)
+                        .foregroundColor(Color(hue: 0.05, saturation: 0.96, brightness: 0.415))
+                        
                 }
                 
                     List(checkListData){ item in
                         CheckView(isChecked: item.isChecked, title: item.title)
                             .listRowBackground(Color(red: 0.675, green: 0.577, blue: 0.509))
-                    }
+                    }.padding(.top, 20.0)
                     .font(.title).listStyle(InsetListStyle())
-                    .padding(.vertical, 0.0)
+                    
                 Text("Subtotal: $" + formattedValue)
                     .font(.title)
                     .foregroundColor(Color(hue: 0.1, saturation: 0.96, brightness: 0.415))
@@ -100,7 +116,8 @@ struct coffeeMenu: View {
                                                 showToast = false
                                             }
                                         }
-                    
+                    sizeOfCup = "Short"
+                    noOfCups = "1"
                     currentCoffee = Coffee()
                     checkListData.removeAll()
                     checkListID+=5
@@ -167,15 +184,15 @@ struct ToastView: View {
             Spacer()
             Text(message)
                 .padding()
-                .background(Color.gray.opacity(0.8))
+                .background(Color.gray.opacity(0.6))
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .transition(.move(edge: .bottom))
         }
     }
 }
-struct coffeeMenu_Previews: PreviewProvider {
-    static var previews: some View {
-        coffeeMenu()
-    }
-}
+//struct coffeeMenu_Previews: PreviewProvider {
+//    static var previews: some View {
+//        coffeeMenu()
+//    }
+//}

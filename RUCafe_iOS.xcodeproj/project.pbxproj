@@ -18,6 +18,7 @@
 		EDC9B4FA2A8E821600227240 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9B4F92A8E821600227240 /* Order.swift */; };
 		EDCFD36F2A95118700D59E12 /* ordersMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD36E2A95118700D59E12 /* ordersMenu.swift */; };
 		EDCFD3712A95120D00D59E12 /* donutsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD3702A95120D00D59E12 /* donutsMenu.swift */; };
+		EDCFD3732A9D3AB800D59E12 /* Donut.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD3722A9D3AB800D59E12 /* Donut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EDC9B4F92A8E821600227240 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		EDCFD36E2A95118700D59E12 /* ordersMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ordersMenu.swift; sourceTree = "<group>"; };
 		EDCFD3702A95120D00D59E12 /* donutsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donutsMenu.swift; sourceTree = "<group>"; };
+		EDCFD3722A9D3AB800D59E12 /* Donut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				EDC9B4F72A8E79EE00227240 /* cartMenu.swift */,
 				EDCFD36E2A95118700D59E12 /* ordersMenu.swift */,
 				EDCFD3702A95120D00D59E12 /* donutsMenu.swift */,
+				EDCFD3722A9D3AB800D59E12 /* Donut.swift */,
 				EDC9B4E12A8BD81000227240 /* Preview Content */,
 			);
 			path = RUCafe_iOS;
@@ -160,6 +163,7 @@
 			files = (
 				EDCFD36F2A95118700D59E12 /* ordersMenu.swift in Sources */,
 				EDC9B4EA2A8BDCA400227240 /* MenuItem.swift in Sources */,
+				EDCFD3732A9D3AB800D59E12 /* Donut.swift in Sources */,
 				EDC9B4DE2A8BD80F00227240 /* mainMenu.swift in Sources */,
 				EDC9B4FA2A8E821600227240 /* Order.swift in Sources */,
 				EDC9B4F02A8C0B8600227240 /* coffeeMenu.swift in Sources */,
