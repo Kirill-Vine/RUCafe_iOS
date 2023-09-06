@@ -30,14 +30,14 @@ struct mainMenu: View {
                             Image("coffee")
                                 .resizable()
                                 .aspectRatio(contentMode:
-                                        .fit)
+                                        .fit).clipShape(RoundedRectangle(cornerRadius: 10.0))
                                 .padding([.top, .leading, .trailing], 20.0)
                     }
                     NavigationLink(destination: donutsMenu()){
                         Image("doughnut_menu")
                             .resizable()
                             .aspectRatio(contentMode:
-                                    .fit)
+                                    .fit).clipShape(RoundedRectangle(cornerRadius: 10.0))
                             .padding([.top, .leading, .trailing], 10)
                     }
                     HStack() {
@@ -45,14 +45,14 @@ struct mainMenu: View {
                             Image("cartMenu")
                                 .resizable()
                                 .aspectRatio(contentMode:
-                                        .fit).padding([.top, .leading, .bottom], 20.0)
+                                        .fit).clipShape(RoundedRectangle(cornerRadius: 10.0)).padding([.top, .leading, .bottom], 20.0)
                         }
                         
                         NavigationLink(destination: ordersMenu()){
                             Image("ordersMenu")
                                 .resizable()
                                 .aspectRatio(contentMode:
-                                        .fit)
+                                        .fit).clipShape(RoundedRectangle(cornerRadius: 10.0))
                                 .padding([.top, .bottom, .trailing], 20.0)
                         }
                         

@@ -191,8 +191,8 @@ struct ToastView: View {
         }
     }
 }
-//struct coffeeMenu_Previews: PreviewProvider {
-//    static var previews: some View {
-//        coffeeMenu()
-//    }
-//}
+struct coffeeMenu_Previews: PreviewProvider {
+    static var previews: some View {
+        coffeeMenu()
+    }
+}
