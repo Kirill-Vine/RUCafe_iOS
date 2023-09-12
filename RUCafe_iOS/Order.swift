@@ -7,22 +7,25 @@
 
 import Foundation
 
-class Order{
-    var currentOrderNumber = 0
+class Order: Identifiable{
+    var id = UUID()
+    static var currentOrderNumber = 0
     var orderNumber:Int
-    var orderPrice:Double = 0
     var items: [any MenuItem] = []
     init(){
-        orderNumber = currentOrderNumber
-        currentOrderNumber+=1
+        Order.currentOrderNumber += 1
+        orderNumber = Order.currentOrderNumber
     }
+    
     // add item to order
     func addItem(item:any MenuItem){
         items.append(item)
     }
     // remove item from order
     func removeItem(item:any MenuItem){
-        // MenuItem cannot be removed by index
+        if let index = items.firstIndex(where: {$0.id == item.id}) {
+                items.remove(at: index)
+            }
     }
     // dipslays price of the order
     func getOrderPrice() -> Double{
@@ -38,16 +41,17 @@ class Order{
     }
     // convert order data to string
     func toString() -> String{
-        let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            numberFormatter.minimumFractionDigits = 2
-            numberFormatter.maximumFractionDigits = 2
+//        let numberFormatter = NumberFormatter()
+//            numberFormatter.numberStyle = .decimal
+//            numberFormatter.minimumFractionDigits = 2
+//            numberFormatter.maximumFractionDigits = 2
             
-            var output = "Order #" + String(orderNumber + 1) + ":\n"
+        var output = "Order #" + String(orderNumber) + ":\n"
             
-            for item in items {
-                output += "\t" + item.toString() + "\n"
-            }
-            return output
+        for item in items {
+            output += item.toString() + "\n"
+        }
+        output+="Total: $" + String(format: "%.2f", getOrderPrice()+getOrderPrice()*0.06625)
+        return output
     }
 }

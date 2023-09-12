@@ -12,18 +12,18 @@ var currentCoffee = Coffee()
 
 struct coffeeMenu: View {
     @State private var showToast = false
-    @State var subtotal:Double=0
-    @State var formattedValue:String="0.00"
-    @State var checkListID = 5
-    @State var checkListData = [
+    @State private var subtotal:Double=0
+    @State private var formattedValue:String="0.00"
+    @State private var checkListID = 5
+    @State private var checkListData = [
         CheckListItem(id:0,title: "French Vanilla"),
         CheckListItem(id:1,title: "Sweet Cream"),
         CheckListItem(id:2,title: "Irish Cream"),
         CheckListItem(id:3,title: "Caramel"),
         CheckListItem(id:4,title: "Mocha")
         ]
-    @State var noOfCups = "1"
-    @State var sizeOfCup = "Short"
+    @State private var noOfCups = "1"
+    @State private var sizeOfCup = "Short"
     var body: some View {
         ZStack{
             Image(systemName: "squareshape.fill")
@@ -111,11 +111,11 @@ struct coffeeMenu: View {
                 Button {
                     currentOrder.addItem(item: currentCoffee)
                     showToast = true
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                            withAnimation {
-                                                showToast = false
-                                            }
-                                        }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                withAnimation {
+                                    showToast = false
+                                }
+                            }
                     sizeOfCup = "Short"
                     noOfCups = "1"
                     currentCoffee = Coffee()
@@ -140,7 +140,7 @@ struct coffeeMenu: View {
             }
             if showToast {
                 if let lastItem = currentOrder.getItems().last {
-                    ToastView(message: "Coffee added \n" + lastItem.toString())
+                    coffeeToastView(message: "Coffee added \n" + lastItem.toString())
                 }
             }
         }
@@ -176,9 +176,8 @@ struct CheckListItem:Identifiable{
     var title: String
 }
 // toast message showing current coffee
-struct ToastView: View {
+struct coffeeToastView: View {
     let message: String
-
     var body: some View {
         VStack {
             Spacer()

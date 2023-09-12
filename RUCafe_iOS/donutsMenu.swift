@@ -34,7 +34,7 @@ struct donutsMenu: View {
                 List(donutList) { item in
                     VStack{
                         HStack {
-                            Text(item.toString()).foregroundColor(Color(hue: 0.1, saturation: 0.96, brightness: 0.415))
+                            Text(item.toStringDonutMenu()).foregroundColor(Color(hue: 0.1, saturation: 0.96, brightness: 0.415))
                             Spacer()
                             Image(item.showImage())
                                 .resizable(resizingMode: .stretch)
@@ -43,7 +43,19 @@ struct donutsMenu: View {
                             
                         }
                         Button {
+                            showToast = false
                             currentOrder.addItem(item: item)
+                            donutList = createDonutList()
+                            showToast = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                        withAnimation {
+                                            showToast = false
+                                        }
+                                    }
+                            if let lastItem = currentOrder.getItems().last {
+                                subtotal += lastItem.itemPrice()*Double(lastItem.getQuantity())
+                                formattedValue = String(format: "%.2f", subtotal)
+                            }
                         } label: {
                             Text("Add to Order")
                         }.foregroundColor(Color.blue)
@@ -54,6 +66,11 @@ struct donutsMenu: View {
                             donutList = createDonutList()
                         }
                 Spacer()
+            }
+            if showToast {
+                if let lastItem = currentOrder.getItems().last {
+                    donutToastView(message: "Donut added \n" + lastItem.toString())
+                }
             }
         }
     }
@@ -82,6 +99,23 @@ func createDonutList() -> [Donut]{
         }
     }
     return newDonutList
+}
+
+// toast message showing added donut
+struct donutToastView: View {
+    let message: String
+
+    var body: some View {
+        VStack {
+            Spacer()
+            Text(message)
+                .padding()
+                .background(Color.gray.opacity(0.6))
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .transition(.move(edge: .bottom))
+        }
+    }
 }
 
 struct donutsMenu_Previews: PreviewProvider {

@@ -27,3 +27,10 @@ extension MenuItem{
         return quantity
     }
 }
+
+extension MenuItem {
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        // Compare instances based on their id property
+        return lhs.id == rhs.id
+    }
+}

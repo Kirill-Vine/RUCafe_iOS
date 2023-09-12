@@ -160,5 +160,27 @@ class Donut: MenuItem, Identifiable{
             }
         return output
     }
+    // convert donut object to string for the list and toast in Donut menu
+    func toStringDonutMenu() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        var output = ""
+        switch type{
+            case .CAKE:
+                output += "Type: Cake"
+            case .HOLE:
+                output += "Type: Hole"
+            case .YEAST:
+                output += "Type: Yeast"
+        }
+        output +=  "\nFlavor: " + flavor
+        let totalPrice = Double(quantity) * itemPrice()
+        if let formattedPrice = numberFormatter.string(from: NSNumber(value: totalPrice)) {
+                output += "\n $" + formattedPrice
+            }
+        return output
+    }
     
 }

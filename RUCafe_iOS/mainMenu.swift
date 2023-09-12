@@ -18,13 +18,9 @@ struct mainMenu: View {
                     .foregroundColor(Color.brown)
                     .ignoresSafeArea()
                 VStack(spacing: 0.0) {
-                    Text("RU")
+                    Text("RU Cafe")
                         .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(hue: 0.056, saturation: 1.0, brightness: 0.235))
-                    Text("Cafe")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .fontWeight(.light)
                         .foregroundColor(Color(hue: 0.056, saturation: 1.0, brightness: 0.235))
                     NavigationLink(destination: coffeeMenu()){
                             Image("coffee")
@@ -38,7 +34,7 @@ struct mainMenu: View {
                             .resizable()
                             .aspectRatio(contentMode:
                                     .fit).clipShape(RoundedRectangle(cornerRadius: 10.0))
-                            .padding([.top, .leading, .trailing], 10)
+                            .padding([.top, .leading, .trailing], 20)
                     }
                     HStack() {
                         NavigationLink(destination: cartMenu()){
