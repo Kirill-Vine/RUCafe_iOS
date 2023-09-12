@@ -14,4 +14,4 @@ items and total including tax. They remove items they do not want and then purch
 When the order is purchased it is pushed to the Store Orders tab where all customer orders are
 displayed with all items, their prices and quantity, and the order’s total displayed. The owner
 user has the option to cancel the selected order to remove it from the list, once the order is
-served.
+served. Run on iPhone 14 Pro
